@@ -4,17 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://dfut77i0s63o0" path="res://icon.svg" id="2_epypp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
-size = Vector2(134, 119)
+size = Vector2(128, 124)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("1_0e48y")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(309, 249.5)
-shape = SubResource("RectangleShape2D_0hol4")
-
 [node name="Icon" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(309, 252)
+position = Vector2(400, 244)
 texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(401, 244)
+shape = SubResource("RectangleShape2D_0hol4")
+debug_color = Color(3.00817e-08, 0.0636552, 0.0817705, 0.42)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D"]
