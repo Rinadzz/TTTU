@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://dhfnhomykfwp"]
+[gd_scene load_steps=11 format=4 uid="uid://dhfnhomykfwp"]
 
 [ext_resource type="Texture2D" uid="uid://ks8otys05gd0" path="res://assets/TTU Assets/grass.png" id="1_41ix0"]
 [ext_resource type="Texture2D" uid="uid://c115gtnw4dc75" path="res://assets/TTU Assets/background.png" id="1_het83"]
 [ext_resource type="Texture2D" uid="uid://n4slav3dsgk7" path="res://assets/TTU Assets/stone.png" id="2_het83"]
 [ext_resource type="PackedScene" uid="uid://6rn1ionre5xn" path="res://scenes/player.tscn" id="4_ogupt"]
+[ext_resource type="PackedScene" uid="uid://dl2uyrxjurwf3" path="res://scenes/killzone.tscn" id="5_snrqm"]
+[ext_resource type="PackedScene" uid="uid://vsb48xhy4pt2" path="res://scenes/turtule.tscn" id="6_4stek"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ogupt"]
 texture = ExtResource("1_41ix0")
@@ -24,6 +26,9 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ogupt")
 sources/1 = SubResource("TileSetAtlasSource_snrqm")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4stek"]
+distance = -8.0
 
 [node name="Tuturial Level" type="Node2D"]
 
@@ -70,3 +75,14 @@ tile_set = SubResource("TileSet_4stek")
 
 [node name="player" parent="." instance=ExtResource("4_ogupt")]
 position = Vector2(138, 480)
+
+[node name="killzone" parent="." instance=ExtResource("5_snrqm")]
+position = Vector2(420, 990)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(0, -1)
+shape = SubResource("WorldBoundaryShape2D_4stek")
+
+[node name="turtule" parent="." instance=ExtResource("6_4stek")]
+position = Vector2(1629, 634)
+script = null
