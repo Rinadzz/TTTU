@@ -1,6 +1,5 @@
-[gd_scene load_steps=10 format=3 uid="uid://vsb48xhy4pt2"]
+[gd_scene load_steps=9 format=3 uid="uid://vsb48xhy4pt2"]
 
-[ext_resource type="Script" uid="uid://ckbpfuuxvp7nq" path="res://scripts/turtule.gd" id="1_4n05e"]
 [ext_resource type="Texture2D" uid="uid://cf5ywnhfn641j" path="res://assets/TTU Assets/turtule anim.png" id="1_u76mc"]
 [ext_resource type="PackedScene" uid="uid://dl2uyrxjurwf3" path="res://scenes/killzone.tscn" id="2_4n05e"]
 
@@ -44,9 +43,9 @@ animations = [{
 size = Vector2(24.039, 17.6449)
 
 [node name="turtule" type="Node2D"]
-script = ExtResource("1_4n05e")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(-30.75, -28.5)
 scale = Vector2(3.20313, 3.34375)
 sprite_frames = SubResource("SpriteFrames_ms0k0")
@@ -59,3 +58,13 @@ frame_progress = 0.641596
 position = Vector2(-1.17073, 0.598133)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_17sd1")
+
+[node name="leftray" type="RayCast2D" parent="."]
+position = Vector2(-76, -6)
+target_position = Vector2(0, 30)
+hit_from_inside = true
+
+[node name="rightray" type="RayCast2D" parent="."]
+position = Vector2(6, -5)
+target_position = Vector2(0, 29)
+hit_from_inside = true
