@@ -34,6 +34,30 @@ offset_right = 1280.0
 offset_bottom = 720.0
 texture = ExtResource("1_het83")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 1.99999
+offset_top = 343.0
+offset_right = 153.54
+offset_bottom = 383.0
+scale = Vector2(2.715, 2.715)
+text = "Use WASD to walk!"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+offset_left = 1877.0
+offset_top = 481.0
+offset_right = 2087.93
+offset_bottom = 521.0
+scale = Vector2(2.38, 2.38)
+text = "Also you can double jump!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 4.0
+offset_top = 396.0
+offset_right = 155.54
+offset_bottom = 436.0
+scale = Vector2(1.605, 1.605)
+text = "and SPACE to jump!"
+
 [node name="Grass" type="TileMapLayer" parent="."]
 scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAAAAAADAAcAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAMAAcAAAAAAAAAAAANAAcAAAAAAAAAAAAOAAcAAAAAAAAAAAAPAAcAAAAAAAAAAAASAAgAAAAAAAAAAAATAAgAAAAAAAAAAAAUAAgAAAAAAAAAAAAVAAgAAAAAAAAAAAAYAAcAAAAAAAAAAAAZAAcAAAAAAAAAAAAaAAcAAAAAAAAAAAAbAAcAAAAAAAAAAAAcAAcAAAAAAAAAAAAgAAYAAAAAAAAAAAAhAAYAAAAAAAAAAAAiAAYAAAAAAAAAAAAjAAYAAAAAAAAAAAA=")
@@ -45,4 +69,4 @@ tile_map_data = PackedByteArray("AAAAAAcAAAAAAAAAAAABAAcAAAAAAAAAAAACAAcAAAAAAAA
 tile_set = SubResource("TileSet_4stek")
 
 [node name="player" parent="." instance=ExtResource("4_ogupt")]
-position = Vector2(109, 260)
+position = Vector2(138, 480)
